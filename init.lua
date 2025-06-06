@@ -215,6 +215,7 @@ vim.api.nvim_create_autocmd('TextYankPost', {
   end,
 })
 
+require 'php'
 -- [[ Install `lazy.nvim` plugin manager ]]
 --    See `:help lazy.nvim.txt` or https://github.com/folke/lazy.nvim for more info
 local lazypath = vim.fn.stdpath 'data' .. '/lazy/lazy.nvim'
@@ -674,6 +675,14 @@ require('lazy').setup({
         -- gopls = {},
         -- pyright = {},
         -- rust_analyzer = {},
+        phpactor = {
+          opts = {
+            init_options = {
+              ['language_server_php_cs_fixer.enabled'] = true,
+              ['language_server_php_code_sniffer.enabled'] = false,
+            },
+          },
+        },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
