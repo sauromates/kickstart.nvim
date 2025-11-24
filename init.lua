@@ -685,14 +685,6 @@ require('lazy').setup({
       local servers = {
         gopls = {},
         rust_analyzer = {},
-        phpactor = {
-          opts = {
-            init_options = {
-              ['language_server_php_cs_fixer.enabled'] = true,
-              ['language_server_php_code_sniffer.enabled'] = false,
-            },
-          },
-        },
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
